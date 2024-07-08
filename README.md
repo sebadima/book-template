@@ -295,5 +295,5 @@ This project has been developed by:
 | Avatar | Name | Nickname | Email |
 | ------ | ---- | -------- | ----- |
 | ![](http://www.gravatar.com/avatar/2ae6d81e0605177ba9e17b19f54e6b6c.jpg?s=64)  | Daniel Herzog | Wikiti | [info@danielherzog.es](mailto:info@danielherzog.es)
-
-
+|   | Alessandro Cucci | alessandrocucci | [alessandro.cucci@gmail.com](mailto:alessandro.cucci@gmail.com)
+add

@@ -8,11 +8,6 @@ on:
 
 jobs:
   build:
-    docker:
-      - image: pandoc/latex
-
-    steps:
-      - checkout
 
       - run:
           name: Setup dependencies
