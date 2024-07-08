@@ -8,20 +8,29 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    docker:
+      - image: pandoc/latex
 
     steps:
-    - uses: actions/checkout@v4
+      - checkout
 
-    - name: configure
-      run: ./configure
+      - run:
+          name: Setup dependencies
+          command:
+            apk add make texlive-xetex ttf-dejavu
 
-    - name: Install dependencies
-      run: make
+      - run:
+          name: Build all formats
+          command:
+            make all
 
-    - name: Run check
-      run: make check
+      - run:
+          name: Check if epub exists
+          command:
+            test -s build/epub/book.epub
 
-    - name: Run distcheck
-      run: make distcheck
+      - run:
+          name: Check if pdf exists
+          command:
+            test -s build/pdf/book.pdf
+
